@@ -2,7 +2,7 @@
 
 Hello everyone!
 
-This is an app i build in Mobile Seuciry.
+This is an app i build in Mobile Security course.
 
 The purpose of the app is to make to move to the next activity.
 
