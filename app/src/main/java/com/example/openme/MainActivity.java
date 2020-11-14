@@ -86,7 +86,7 @@ public class MainActivity extends AppCompatActivity {
         } else if (!checkManufacturer()) {
             toast("Which device do you have? only the company");
         } else if (!isAppInstalled(packageNameToCheck)) {
-            toast("You don't have whatsapp on your phone? wow...");
+            toast("You don't have Whatsapp on your phone? wow...");
         } else if (!sensorsActivate()) {
             toast("Check if your BLUETOOTH or NFC or GPS is enable...");
         } else {
