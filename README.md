@@ -6,7 +6,7 @@ This is an app i build in Mobile Seuciry.
 
 The purpose of the app is to make to move to the next activity.
 
-**But wait**
+**But wait...**
 
 You need to *Break The Code*
 
