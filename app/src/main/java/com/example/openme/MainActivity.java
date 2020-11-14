@@ -64,9 +64,7 @@ public class MainActivity extends AppCompatActivity {
 
     @SuppressLint("ClickableViewAccessibility")
     private void listeners() {
-        main_BTN_enter.setOnClickListener(v -> {
-            activateSecurity();
-        });
+        main_BTN_enter.setOnClickListener(v -> activateSecurity());
 
         main_RLT_screen.setOnTouchListener((v, event) ->{
             x = event.getX();
@@ -88,7 +86,7 @@ public class MainActivity extends AppCompatActivity {
         } else if (!checkManufacturer()) {
             toast("Which device do you have? only the company");
         } else if (!isAppInstalled(packageNameToCheck)) {
-            toast("You don't have whatsapp on your phone? wow man...");
+            toast("You don't have whatsapp on your phone? wow...");
         } else if (!sensorsActivate()) {
             toast("Check if your BLUETOOTH or NFC or GPS is enable...");
         } else {
@@ -99,10 +97,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private boolean sensorsActivate() {
-        if (!isNfcEnable() || !isGpsEnable() || !isBTEnable()) {
-            return false;
-        }
-        return true;
+        return isNfcEnable() && isGpsEnable() && isBTEnable();
     }
 
     public boolean isGpsEnable() {
@@ -128,10 +123,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private boolean checkManufacturer() {
-        if (this.main_TIP_password.getText().toString().toLowerCase().trim().equals(Build.MANUFACTURER.toLowerCase())) {
-            return true;
-        }
-        return false;
+        return this.main_TIP_password.getText().toString().toLowerCase().trim().equals(Build.MANUFACTURER.toLowerCase());
     }
 
     private boolean moveTheButton() {
